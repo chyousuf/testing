@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/insert','InsertController@insert');
+Route::get('/showdata','InsertController@showdata');
+
+Route::get('/','InsertController@pageshow');
+Route::get('/update/{id}','InsertController@Edit');
+Route::get('/Editview/{id}','InsertController@Editview');
+
+Route::get('/delete/{id}','InsertController@delete');
